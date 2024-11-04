@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generalized 15 Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="initGameXY()">
+    <header>
+      <h2><i>Bengisu Özcan 64535</i></h2>
+      <h1>Generalized 15 Game</h1>
+      <h5>Concentration Game Step 1</h5>
+      <h5>Game Time: <span id="time"></span> seconds</h5>
+    </header>
+
+    <table id="plansza"></table>
+    <br />
+
+    <label>Number of Moves: <span id="current"></span></label>
+    <button onclick="startGameXY()">New Game</button>
+    <label>Game Score: <span id="wynik"></span></label><span id="bingo"></span>
+    <br /><br />
+
+    <label for="bokY">Side Y:</label>
+    <select id="bokY"></select>
+    <label for="bokX">Side X:</label>
+    <select id="bokX"></select>
+<br>
+    <audio id="winSound" src="sound.mp3"></audio>
+    <button onclick="startSound()">Start sound</button>
+    <button onclick="stopSound()">Stop sound</button>
+
+    <div
+      id="winImageOverlay"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <img
+        id="winImage"
+        src="img.jpg"
+        alt="Congratulations!"
+        style="max-width: 80%; max-height: 80%"
+      />
+    </div>
+
+    <footer><br />Game Puzzle &copy;2024 Bengisu Özcan</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
